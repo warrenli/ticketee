@@ -1,0 +1,16 @@
+package_assets: always
+embed_images: off
+
+javascripts:
+  workspace:
+    - public/javascripts/jquery.js
+    - public/javascripts/jquery-ui.js
+    - public/javascripts/rails.js
+    - public/javascripts/application.js
+
+stylesheets:
+  workspace:
+    - public/stylesheets/reset.css
+    - public/stylesheets/text.css
+    - public/stylesheets/960.css
+    - public/stylesheets/application.css

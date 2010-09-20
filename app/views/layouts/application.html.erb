@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= yield(:title) || "Untitled" %></title>
+    <meta http-equiv="content-type" content="text/xhtml; charset=utf-8" />
+    <link rel="icon" href="/images/favicon.ico" type="image/png" />
+    <%= include_stylesheets "workspace", :media => 'all' %>
+    <%= include_javascripts "workspace" %>
+
+    <%= csrf_meta_tag %>
+    <%= yield(:head) %>
+  </head>
+  <body>
+    <div id="locale_header" class="container_12">
+      <div class="grid_2 prefix_10 clearfix">
+        <p>
+        <% for k, v in AVAILABLE_LOCALES %>
+          <% if (I18n.locale.to_s == k) %>
+            <span><%= AVAILABLE_LOCALES[I18n.locale.to_s] %></span>
+          <% else %>
+            <span><%= link_to "#{v}", url_for( {:controller => self.controller_name, :action => self.action_name, :locale => "#{k}"} ) %></span>
+          <% end %>
+        <% end %>
+        </p>
+      </div>
+    </div>
+    <div id="container" class="container_16">
+      <div id="header" class="grid_16 clearfix">
+        <p>Header</p>
+      </div>
+      <div id="main_content" class="grid_16 clearfix">
+        <% flash.each do |name, msg| %>
+          <%= content_tag :div, msg, :id => "flash_#{name}" %>
+        <% end %>
+        <%= content_tag :h1, yield(:title) if show_title? %>
+        <%= yield %>
+      </div>
+      <div id="footer" class="grid_16 clearfix">
+        <p>Footer</p>
+      </div>
+    </div>
+    <div id="sub_footer" class="container_12">
+      <div class="grid_12 clearfix">
+        <p>Sub-footer</p> 
+      </div>
+    </div>
+    <%= yield(:tail) %>
+  </body>
+</html>
