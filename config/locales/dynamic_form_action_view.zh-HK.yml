@@ -1,0 +1,8 @@
+zh-HK:
+  errors:
+    template:
+      header:
+        one:    "有 1 個問題導致系統不能將這個'%{model}'存檔。"
+        other:  "有 %{count} 個問題導致系統不能將這個'%{model}'存檔。"
+      # The variable :count is also available
+      body: "以下是出現問題的欄位："

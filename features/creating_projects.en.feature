@@ -5,13 +5,17 @@ Feature: Creating projects
 
   Background:
     Given I choose English language
+    And I am on the homepage
+    When I follow "New Project"
 
   Scenario: Creating a project
-    Given I am on the homepage
-    When I follow "New Project"
     And I fill in "Name" with "TextMate 2"
     And I press "Create Project"
     Then I should see "Project has been created"
     And I should be on the project page for "TextMate 2"
     And I should see "TextMate 2 - Projects - Ticketee"
 
+  Scenario: Creating a project without a name
+    And I press "Create"
+    Then I should see "Project has not been created."
+    Then I should see "Name can't be blank"
