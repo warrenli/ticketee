@@ -62,6 +62,10 @@ a img {
   overflow:auto;
 }
 
+#main_content {
+  min-height: 300px;
+}
+
 #footer {
   border-top: solid 1px blue;
   text-align: center;

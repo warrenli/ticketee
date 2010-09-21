@@ -1,0 +1,13 @@
+zh-HK:
+  activerecord:
+    models:
+      project:
+        one: "專案"
+        other: "多個專案"
+    attributes:
+      project:
+        name: "專案名稱"
+
+  projects:
+    new_link: "新專案"
+    created_msg: "新專案已成功建立。"
