@@ -9,9 +9,12 @@ en:
         name: "Project Name"
 
   projects:
+    confirm_msg: "Are you sure?"
+    created_msg: "Project has been created."
+    deleted_msg: "Project has been deleted."
+    delete_title: "Delete"
     edit_title: "Edit"
     new_title: "New Project"
-    created_msg: "Project has been created."
     not_created_msg: "Project has not been created."
-    updated_msg: "Project has been updated."
     not_updated_msg: "Project has not been updated."
+    updated_msg: "Project has been updated."

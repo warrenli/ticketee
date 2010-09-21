@@ -2,3 +2,4 @@
 <h2><%= @project.name %></h2>
 
 <%= link_to t("projects.edit_title"), edit_project_path(@project) %>
+<%= link_to t("projects.delete_title"), @project, :method => :delete, :confirm => t("projects.confirm_msg") %>

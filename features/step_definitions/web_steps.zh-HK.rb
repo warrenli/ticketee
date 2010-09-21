@@ -135,6 +135,15 @@ end
 #  end
 #end
 
+
+那麼 /^(?:|我)應該不會看到"([^\"]*)"(?:|的提示信息)$/ do |text|
+  if page.respond_to? :should
+    page.should have_no_content(text)
+  else
+    assert page.has_no_content?(text)
+  end
+end
+
 #Then /^(?:|I )should not see "([^"]*)"(?: within "([^"]*)")?$/ do |text, selector|
 #  with_scope(selector) do
 #    if page.respond_to? :should
@@ -146,16 +155,15 @@ end
 #end
 
 #Then /^(?:|I )should not see \/([^\/]*)\/(?: within "([^"]*)")?$/ do |regexp, selector|
-那麼 /^(?:|我)沒看到包含"\/([^\/]*)\/"的提示信息(?: within "([^"]*)")?$/ do |regexp, selector|
-  regexp = Regexp.new(regexp)
-  with_scope(selector) do
-    if page.respond_to? :should
-      page.should have_no_xpath('//*', :text => regexp)
-    else
-      assert page.has_no_xpath?('//*', :text => regexp)
-    end
-  end
-end
+#  regexp = Regexp.new(regexp)
+#  with_scope(selector) do
+#    if page.respond_to? :should
+#      page.should have_no_xpath('//*', :text => regexp)
+#    else
+#      assert page.has_no_xpath?('//*', :text => regexp)
+#    end
+#  end
+#end
 
 #Then /^the "([^"]*)" field(?: within "([^"]*)")? should contain "([^"]*)"$/ do |field, selector, value|
 #  with_scope(selector) do

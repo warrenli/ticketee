@@ -35,6 +35,12 @@ class ProjectsController < ApplicationController
       flash[:error] = t("projects.not_updated_msg")
       render :action => "edit"
     end
+  end
 
+  def destroy
+    @project = Project.find(params[:id])
+    @project.destroy
+    flash[:notice] = t("projects.deleted_msg")
+    redirect_to projects_path
   end
 end
