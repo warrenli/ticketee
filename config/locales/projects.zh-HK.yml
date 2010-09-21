@@ -9,6 +9,9 @@ zh-HK:
         name: "專案名稱"
 
   projects:
+    edit_title: "修改"
     new_title: "新專案"
     created_msg: "新專案已成功建立。"
     not_created_msg: "專案未能建立。"
+    updated_msg: "專案已修改。"
+    not_updated_msg: "未能修改專案。"
