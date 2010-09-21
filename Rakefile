@@ -4,4 +4,4 @@
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
-R3app::Application.load_tasks
+Ticketee::Application.load_tasks

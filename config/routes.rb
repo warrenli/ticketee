@@ -1,3 +1,2 @@
-R3app::Application.routes.draw do
-
+Ticketee::Application.routes.draw do
 end

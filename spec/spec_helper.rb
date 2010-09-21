@@ -5,7 +5,6 @@ require 'rspec/rails'
 
 require 'email_spec'
 require 'database_cleaner'
-require File.expand_path(File.dirname(__FILE__) + "/blueprints")
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.

@@ -1,8 +1,8 @@
 # Be sure to restart your server when you modify this file.
 
-R3app::Application.config.session_store :cookie_store, :key => '_r3app_session'
+Ticketee::Application.config.session_store :cookie_store, :key => '_ticketee_session'
 
 # Use the database for sessions instead of the cookie-based default,
 # which shouldn't be used to store highly confidential information
 # (create the session table with "rake db:sessions:create")
-# R3app::Application.config.session_store :active_record_store
+# Ticketee::Application.config.session_store :active_record_store
