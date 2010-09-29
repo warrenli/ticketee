@@ -11,6 +11,8 @@ gem 'jammit'
 # regexp match /.../n against to UTF-8 string
 gem "escape_utils"
 
+gem 'devise'
+
 group :development, :test do
   gem 'rspec-rails', '= 2.0.0.beta.20'
 end

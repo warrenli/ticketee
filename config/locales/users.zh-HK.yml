@@ -1,0 +1,11 @@
+zh-HK:
+  activerecord:
+    models:
+      user:
+        one: "帳戶"
+        other: "多個帳戶"
+    attributes:
+      user:
+        email: "電郵地址"
+        password: "帳戶密碼"
+        password_confirmation: "確認密碼"

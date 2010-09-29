@@ -30,6 +30,9 @@
       </div>
       <div id="main_content" class="grid_16 clearfix">
         <h1><%= link_to "Ticketee", root_path %></h1>
+        <div id="auth_nav">
+        <%= link_to t("authenticate.signup_title"), new_user_registration_path %>
+        </div>
         <% flash.each do |name, msg| %>
           <%= content_tag :div, msg, :id => "flash_#{name}" %>
         <% end %>

@@ -1,0 +1,7 @@
+en:
+  authenticate:
+    dont_receive_unlock_instructions: "Didn't receive unlock instructions?"
+    dont_receive_confirm_instructions: "Didn't receive confirmation instructions?"
+    forget_your_password_title: "Forgot your password?"
+    signin_title: "Sign in"
+    signup_title: "Sign up"
