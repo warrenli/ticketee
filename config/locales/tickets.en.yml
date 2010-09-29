@@ -11,5 +11,8 @@ en:
 
   tickets:
     created_msg: "Ticket has been created."
+    edit_title: "Edit"
     new_title: "New Ticket"
     not_created_msg: "Ticket has not been created."
+    not_updated_msg: "Ticket has not been updated."
+    updated_msg: "Ticket has been updated."

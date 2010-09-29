@@ -28,6 +28,13 @@ class TicketsController < ApplicationController
   end
 
   def update
+    if @ticket.update_attributes(params[:ticket])
+      flash[:notice] = t("tickets.updated_msg")
+      redirect_to [@project, @ticket]
+    else
+      flash[:error] = t("tickets.not_updated_msg")
+      render :action => "edit"
+    end
   end
 
   def destroy
