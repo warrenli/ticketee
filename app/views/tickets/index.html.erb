@@ -1,0 +1,27 @@
+<h1>Listing tickets</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Project</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tickets.each do |ticket| %>
+  <tr>
+    <td><%= ticket.title %></td>
+    <td><%= ticket.description %></td>
+    <td><%= ticket.project.name %></td>
+    <td><%= link_to 'Show', [@project, ticket] %></td>
+    <td><%= link_to 'Edit', edit_project_ticket_path(@project, ticket) %></td>
+    <td><%= link_to 'Destroy', project_ticket_path(@project, ticket), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Ticket', new_project_ticket_path %>

@@ -3,3 +3,5 @@
 
 <%= link_to t("projects.edit_title"), edit_project_path(@project) %>
 <%= link_to t("projects.delete_title"), @project, :method => :delete, :confirm => t("projects.confirm_msg") %>
+<hr />
+<%= link_to t('tickets.new_title'), new_project_ticket_path(@project) %>

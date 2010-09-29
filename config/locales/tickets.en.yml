@@ -1,0 +1,15 @@
+en:
+  activerecord:
+    #models:
+    #  ticket:
+    #    one: "Ticket"
+    #    other: "Tickets"
+    attributes:
+      ticket:
+        title: "Title"
+        description: "Description"
+
+  tickets:
+    created_msg: "Ticket has been created."
+    new_title: "New Ticket"
+    not_created_msg: "Ticket has not been created."

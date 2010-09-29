@@ -1,0 +1,15 @@
+zh-HK:
+  activerecord:
+    models:
+      ticket:
+        one: "工作單"
+        other: "多個工作單"
+    attributes:
+      ticket:
+        title: "標題"
+        description: "明細"
+
+  tickets:
+    created_msg: "新工作單已成功建立。"
+    new_title: "新工作單"
+    not_created_msg: "工作單未能建立。"
