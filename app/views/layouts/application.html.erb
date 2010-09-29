@@ -31,8 +31,13 @@
       <div id="main_content" class="grid_16 clearfix">
         <h1><%= link_to "Ticketee", root_path %></h1>
         <div id="auth_nav">
-        <%= link_to t("authenticate.signup_title"), new_user_registration_path %>
+        <% if !user_signed_in? %>
+          <%= link_to t("authenticate.signup_title"), new_user_registration_path %>
+        <% else %>
+          <%= t("authenticate.signin_as",  :logged_in_user => current_user.email) %>
+        <% end %>
         </div>
+        <br />
         <% flash.each do |name, msg| %>
           <%= content_tag :div, msg, :id => "flash_#{name}" %>
         <% end %>

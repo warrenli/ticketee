@@ -4,4 +4,5 @@ zh-HK:
     dont_receive_confirm_instructions: "未收到確認帳戶指示？"
     forget_your_password_title: "忘記密碼？"
     signin_title: "登入"
+    signin_as: "%{logged_in_user} 經已登入"
     signup_title: "註冊"

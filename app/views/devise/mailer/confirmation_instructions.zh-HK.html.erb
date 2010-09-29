@@ -1,0 +1,5 @@
+<p>歡迎您 <%= @resource.email %>!</p>
+
+<p>請您按以下個鏈接確認你的新帳戶</p>
+
+<p><%= link_to '確認新帳戶', confirmation_url(@resource, :confirmation_token => @resource.confirmation_token) %></p>
