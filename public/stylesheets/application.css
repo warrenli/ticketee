@@ -160,3 +160,32 @@ a img {
   font-size: 12px;
   list-style: square;
 }
+
+#auth_nav {
+  float: right;
+}
+
+table {
+  background: #fff;
+  width: 100%;
+}
+
+th {
+  color: white;
+  background: #666699;
+  font-weight: bold;
+  padding: 0.5em;
+  white-space: nowrap;
+}
+
+td {
+  padding: 0.5em;
+}
+
+tr.even td {
+  background: #ddd;
+}
+
+tr.odd td {
+  background: #eee;
+}

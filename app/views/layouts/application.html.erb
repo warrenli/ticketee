@@ -29,6 +29,7 @@
         <p>Header</p>
       </div>
       <div id="main_content" class="grid_16 clearfix">
+        <h1><%= link_to "Ticketee", root_path %></h1>
         <% flash.each do |name, msg| %>
           <%= content_tag :div, msg, :id => "flash_#{name}" %>
         <% end %>
