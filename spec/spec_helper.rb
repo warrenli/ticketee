@@ -23,10 +23,7 @@ RSpec.configure do |config|
   config.include(EmailSpec::Helpers)
   config.include(EmailSpec::Matchers)
 
-  config.before(:suite) do
-    DatabaseCleaner.strategy = :transaction
-    DatabaseCleaner.clean_with(:truncation)
-  end
+  DatabaseCleaner.strategy = :truncation
 
   config.before(:each) do
     DatabaseCleaner.start

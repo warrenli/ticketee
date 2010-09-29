@@ -16,5 +16,6 @@ zh-HK:
     edit_title: "修改"
     new_title: "新專案"
     not_created_msg: "專案未能建立。"
+    not_found_msg: "找不到你須要的專案。"
     not_updated_msg: "未能修改專案。"
     updated_msg: "專案已修改。"

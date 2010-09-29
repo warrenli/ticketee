@@ -16,5 +16,6 @@ en:
     edit_title: "Edit"
     new_title: "New Project"
     not_created_msg: "Project has not been created."
+    not_found_msg: "The project you were looking for could not be found."
     not_updated_msg: "Project has not been updated."
     updated_msg: "Project has been updated."
