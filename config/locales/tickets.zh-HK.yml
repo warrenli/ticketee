@@ -10,7 +10,10 @@ zh-HK:
         description: "明細"
 
   tickets:
+    confirm_msg: "請確認刪除!"
     created_msg: "新工作單已成功建立。"
+    deleted_msg: "工作單已刪除。"
+    delete_title: "刪除"
     edit_title: "修改"
     new_title: "新工作單"
     not_created_msg: "工作單未能建立。"
