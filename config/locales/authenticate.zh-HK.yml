@@ -5,4 +5,5 @@ zh-HK:
     forget_your_password_title: "忘記密碼？"
     signin_title: "登入"
     signin_as: "%{logged_in_user} 經已登入"
+    signout_title: "登出"
     signup_title: "註冊"

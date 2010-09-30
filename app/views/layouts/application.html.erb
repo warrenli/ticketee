@@ -35,7 +35,8 @@
           <%= link_to t("authenticate.signup_title"), new_user_registration_path %> |
           <%= link_to t("authenticate.signin_title"), new_user_session_path %>
         <% else %>
-          <%= t("authenticate.signin_as",  :logged_in_user => current_user.email) %>
+          <%= t("authenticate.signin_as",  :logged_in_user => current_user.email) %> |
+          <%= link_to t("authenticate.signout_title"), destroy_user_session_path %>
         <% end %>
         </div>
         <br />

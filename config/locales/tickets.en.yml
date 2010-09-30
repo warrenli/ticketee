@@ -12,6 +12,7 @@ en:
   tickets:
     confirm_msg: "Are you sure?"
     created_msg: "Ticket has been created."
+    created_by_msg: "Created by %{ticket_creator}"
     deleted_msg: "Ticket has been deleted."
     delete_title: "Delete"
     edit_title: "Edit"

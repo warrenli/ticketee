@@ -12,6 +12,7 @@ zh-HK:
   tickets:
     confirm_msg: "請確認刪除!"
     created_msg: "新工作單已成功建立。"
+    created_by_msg: "%{ticket_creator} 建立這工作單"
     deleted_msg: "工作單已刪除。"
     delete_title: "刪除"
     edit_title: "修改"

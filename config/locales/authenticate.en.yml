@@ -5,4 +5,5 @@ en:
     forget_your_password_title: "Forgot your password?"
     signin_title: "Sign in"
     signin_as: "Signed in as %{logged_in_user}"
+    signout_title: "Sign out"
     signup_title: "Sign up"
