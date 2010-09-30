@@ -9,3 +9,4 @@ zh-HK:
         email: "電郵地址"
         password: "帳戶密碼"
         password_confirmation: "確認密碼"
+        remember_me: "保持我的登入狀態  "
