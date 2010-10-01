@@ -1,0 +1,9 @@
+en:
+  admin_base:
+    title: "Admin"
+    welcome_msg: "Welcome to Ticketee's Admin Lounge. Please enjoy your stay."
+  admin_user:
+    created_msg: "User has been created."
+    new_title: "New User"
+    not_created_msg: "User has not been created."
+    users_title: "Users"

@@ -37,6 +37,9 @@
         <% else %>
           <%= t("authenticate.signin_as",  :logged_in_user => current_user.email) %> |
           <%= link_to t("authenticate.signout_title"), destroy_user_session_path %>
+          <%= admins_only do %>
+            | <%= link_to t("admin_base.title"), admin_root_path %>
+          <% end %>
         <% end %>
         </div>
         <br />
