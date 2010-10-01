@@ -76,10 +76,11 @@ end
 #end
 
 #When /^(?:|I )check "([^"]*)"(?: within "([^"]*)")?$/ do |field, selector|
-#  with_scope(selector) do
-#    check(field)
-#  end
-#end
+當 /^(?:|我)在"([^"]*)"框打勾(?: within "([^"]*)")?$/ do |field, selector|
+  with_scope(selector) do
+    check(field)
+  end
+end
 
 #When /^(?:|I )uncheck "([^"]*)"(?: within "([^"]*)")?$/ do |field, selector|
 #  with_scope(selector) do

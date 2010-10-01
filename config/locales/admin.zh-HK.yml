@@ -4,6 +4,7 @@ zh-HK:
     welcome_msg: "歡迎來到 Ticketee 的管理員工作主頁。"
   admin_user:
     created_msg: "帳戶已成功建立。"
+    is_an_admin: "是管理員?"
     new_title: "新帳戶"
     not_created_msg: "帳戶未能建立。"
     users_title: "帳戶"
