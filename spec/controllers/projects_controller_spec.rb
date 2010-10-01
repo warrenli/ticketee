@@ -20,7 +20,7 @@ describe ProjectsController do
     it "displays an error message when asked for a missing project" do
       get :show, :id => "not-here"
       response.should redirect_to(projects_path)
-      flash[:error].should eql(I18n.t("projects.not_found_msg"))
+      flash[:alert].should eql(I18n.t("projects.not_found_msg"))
     end
 
     describe "standard users" do
@@ -45,7 +45,7 @@ describe ProjectsController do
     it "找不到專案時顯示錯誤信息" do
       get :show, :id => "not-here"
       response.should redirect_to(projects_path)
-      flash[:error].should eql(I18n.t("projects.not_found_msg"))
+      flash[:alert].should eql(I18n.t("projects.not_found_msg"))
     end
 
     describe "一般帳戶" do

@@ -32,7 +32,7 @@ class ProjectsController < ApplicationController
       flash[:notice] = t("projects.updated_msg")
       redirect_to @project
     else
-      flash[:error] = t("projects.not_updated_msg")
+      flash[:alert] = t("projects.not_updated_msg")
       render :action => "edit"
     end
   end
@@ -47,7 +47,7 @@ class ProjectsController < ApplicationController
     def find_project
       @project = Project.find(params[:id])
     rescue ActiveRecord::RecordNotFound
-      flash[:error] = t("projects.not_found_msg")
+      flash[:alert] = t("projects.not_found_msg")
       redirect_to projects_path
     end
 end
