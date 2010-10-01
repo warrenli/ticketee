@@ -6,7 +6,6 @@ Feature: Editing projects
   Background:
     Given I choose English language
     Given there is an admin with the email address "admin@ticketee.com" and password "password"
-    And "admin@ticketee.com" has confirmed their account
     And I am signed in as them
     Given there is a project called "TextMate 2"
     And I am on the homepage

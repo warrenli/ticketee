@@ -7,7 +7,7 @@
 
   背景:
     假設 選用 中文
-    假設 有一位帳戶電郵地址是"user@ticketee.com"密碼是"password"
+    假設 有一位未確認的帳戶電郵地址是"user@ticketee.com"密碼是"password"
 
   場景: 確認新帳戶同時登入系統
     當 "user@ticketee.com"閱讀標題為"確認帳戶的指示"的電子郵件

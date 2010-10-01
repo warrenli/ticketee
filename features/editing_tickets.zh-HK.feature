@@ -8,7 +8,6 @@
   背景:
     假設 選用 中文
     假設 有一位帳戶電郵地址是"user@ticketee.com"密碼是"password"
-    假設 "user@ticketee.com"已確認帳戶
     而且 已成功登入系統
     假設 有一個名稱為"大中華"的專案
     而且 "user@ticketee.com"給這個專案建立以下工作單:

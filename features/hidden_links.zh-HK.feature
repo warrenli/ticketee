@@ -8,9 +8,7 @@
   背景:
     假設 選用 中文
     假設 有一位帳戶電郵地址是"user@ticketee.com"密碼是"password"
-    而且 "user@ticketee.com"已確認帳戶
     假設 有一位管理員電郵地址是"admin@ticketee.com"密碼是"password"
-    而且 "admin@ticketee.com"已確認帳戶
     而且 有一個名稱為"大中華"的專案
 
   場景: 隱藏"新專案"鏈接給未登入的帳戶

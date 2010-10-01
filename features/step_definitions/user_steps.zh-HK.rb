@@ -1,9 +1,10 @@
 # encoding: utf-8
 
-假設 /^有一位(管理員|帳戶)電郵地址是"([^"]*)"密碼是"([^"]*)"$/ do |admin, email, password|
-  @user = User.create!(:email => email, :password => password, :password_confirmation => password)
-  @user.admin = admin == "管理員"
+假設 /^有一位(未確認的)?\s?(管理員|帳戶)電郵地址是"([^"]*)"密碼是"([^"]*)"$/ do |unconfirmed, admin, email, password|
+  @user = User.new(:email => email, :password => password, :password_confirmation => password)
+  @user.admin = true if admin == "管理員"
   @user.save!
+  @user.confirm! unless unconfirmed
 end
 
 假設 /^"([^"]*)"已確認帳戶$/ do |email|

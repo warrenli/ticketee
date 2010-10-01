@@ -5,7 +5,7 @@ Feature: Signing in
 
   Background:
     Given I choose English language
-    Given there is a user with the email address "user@ticketee.com" and password "password"
+    Given there is an unconfirmed user with the email address "user@ticketee.com" and password "password"
 
   Scenario: Signing in via confirmation
     And "user@ticketee.com" opens the email with subject "Confirmation instructions"

@@ -6,9 +6,7 @@ Feature: Hidden Links
   Background:
     Given I choose English language
     Given there is a user with the email address "user@ticketee.com" and password "password"
-    And "user@ticketee.com" has confirmed their account
     Given there is an admin with the email address "admin@ticketee.com" and password "password"
-    And "admin@ticketee.com" has confirmed their account
     And there is a project called "TextMate 2"
 
   Scenario: New project link is hidden for non-signed-in users
