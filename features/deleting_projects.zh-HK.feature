@@ -7,6 +7,9 @@
 
   背景:
     假設 選用 中文
+    假設 有一位管理員電郵地址是"admin@ticketee.com"密碼是"password"
+    而且 "admin@ticketee.com"已確認帳戶
+    而且 已成功登入系統
 
   場景: 刪除一個專案
     假設 有一個名稱為"大中華"的專案

@@ -6,4 +6,6 @@
 <% end %>
 </ul>
 
-<%= link_to t("projects.new_title"), new_project_path %>
+<%= admins_only do %>
+  <%= link_to t("projects.new_title"), new_project_path %>
+<% end %>

@@ -3,6 +3,7 @@ en:
     dont_receive_unlock_instructions: "Didn't receive unlock instructions?"
     dont_receive_confirm_instructions: "Didn't receive confirmation instructions?"
     forget_your_password_title: "Forgot your password?"
+    must_admin_msg: "You must be an admin to do that."
     signin_title: "Sign in"
     signin_as: "Signed in as %{logged_in_user}"
     signout_title: "Sign out"

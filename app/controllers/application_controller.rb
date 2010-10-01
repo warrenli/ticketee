@@ -13,4 +13,12 @@ class ApplicationController < ActionController::Base
     locale = AVAILABLE_LOCALES.keys.include?(locale) ? locale : I18n.default_locale
     session[:locale] = I18n.locale = locale
   end
+
+  def authorize_admin!
+    authenticate_user!
+    unless current_user.admin?
+      flash[:alert] = t("authenticate.must_admin_msg")
+      redirect_to root_path
+    end
+  end
 end

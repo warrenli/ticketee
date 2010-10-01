@@ -3,6 +3,7 @@ zh-HK:
     dont_receive_unlock_instructions: "未收到解封帳戶指示？"
     dont_receive_confirm_instructions: "未收到確認帳戶指示？"
     forget_your_password_title: "忘記密碼？"
+    must_admin_msg: "只有管理員才可以使用這功能"
     signin_title: "登入"
     signin_as: "%{logged_in_user} 經已登入"
     signout_title: "登出"
