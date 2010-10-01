@@ -1,0 +1,5 @@
+<% title("#{User.model_name.human}") %>
+<h2><%= "#{User.model_name.human}" %></h2>
+
+<h2><%= @user %></h2>
+<%= link_to t('admin_user.edit_title'), edit_admin_user_path(@user) %>

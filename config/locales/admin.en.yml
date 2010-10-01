@@ -4,7 +4,10 @@ en:
     welcome_msg: "Welcome to Ticketee's Admin Lounge. Please enjoy your stay."
   admin_user:
     created_msg: "User has been created."
+    edit_title: "Edit"
     is_an_admin: "Is an admin?"
     new_title: "New User"
     not_created_msg: "User has not been created."
     users_title: "Users"
+    not_updated_msg: "User has not been updated."
+    updated_msg: "User has been updated."
