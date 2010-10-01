@@ -1,10 +1,9 @@
-<h1>Listing tickets</h1>
-
+<h2><%= "#{Ticket.model_name.human} - #{@project.name}"  %></h2>
 <table>
   <tr>
-    <th>Title</th>
-    <th>Description</th>
-    <th>Project</th>
+    <th><%= Ticket.human_attribute_name("title") %></th>
+    <th><%= Ticket.human_attribute_name("description") %></th>
+    <th><%= Project.model_name.human %></th>
     <th></th>
     <th></th>
     <th></th>
