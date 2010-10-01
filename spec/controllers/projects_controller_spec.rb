@@ -2,15 +2,10 @@
 
 require 'spec_helper'
 
-#  for  OpenStruct.new
-require 'ostruct'
-
 describe ProjectsController do
 
   before do
-    @warden = OpenStruct.new
-    @warden.stub!(:set_user)
-    request.env['warden'] = @warden
+    stub_warden
   end
 
   let(:user) { User.create!(:email => "user@ticketee.com", :password => "password", :password_confirmation => "password") }
@@ -32,8 +27,7 @@ describe ProjectsController do
       { :new => "get", :create => "post", :edit => "get",
         :update => "put", :destroy => "delete" }.each_pair do |action, method|
         it "cannot access the #{action} action" do
-          @warden.should_receive(:authenticate!).with(:scope => :user)
-          controller.stub!(:current_user).and_return(user)
+          sign_in_as(user)
           send(method, action, :id => project.id)
           response.should redirect_to(root_path)
           flash[:alert].should eql( I18n.t("authenticate.must_admin_msg") )
@@ -58,8 +52,7 @@ describe ProjectsController do
       { :new => "get", :create => "post", :edit => "get",
         :update => "put", :destroy => "delete" }.each_pair do |action, method|
         it "是不可以執行 \"#{action}\" 工作" do
-          @warden.should_receive(:authenticate!).with(:scope => :user)
-          controller.stub!(:current_user).and_return(user)
+          sign_in_as(user)
           send(method, action, :id => project.id)
           response.should redirect_to(root_path)
           flash[:alert].should eql( I18n.t("authenticate.must_admin_msg") )
