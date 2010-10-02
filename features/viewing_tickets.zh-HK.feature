@@ -16,6 +16,9 @@
     而且 "user@ticketee.com"給這個專案建立以下工作單:
       |     title     |    description   |
       |     售票服務    | 現有電腦系統須要更新 |
+    而且 "user@ticketee.com"可以閱讀"大中華"專案
+    而且 "user@ticketee.com"可以閱讀"運動會"專案
+    而且 已成功登入系統
     而且 我來到首頁
 
   場景: 查閱專案的工作單

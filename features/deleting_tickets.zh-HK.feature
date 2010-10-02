@@ -10,6 +10,7 @@
     假設 有一位帳戶電郵地址是"user@ticketee.com"密碼是"password"
     而且 已成功登入系統
     假設 有一個名稱為"大中華"的專案
+    而且 "user@ticketee.com"可以閱讀"大中華"專案
     而且 "user@ticketee.com"給這個專案建立以下工作單:
       |     title     |    description     |
       |     賀新年     |  一個普天同慶的大日子  |
