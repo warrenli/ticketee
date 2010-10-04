@@ -6,6 +6,10 @@ Given /^"([^"]*)" can create tickets on the "([^"]*)" project$/ do |user, projec
   create_permission(user, find_project(project), "create tickets")
 end
 
+Given /^"([^"]*)" can edit tickets in the "([^"]*)" project$/ do |user, project|
+  create_permission(user, find_project(project), "edit tickets")
+end
+
 def create_permission(email, object, action)
   Permission.create!(:user => User.find_by_email!(email), :object => object, :action => action)
 end
