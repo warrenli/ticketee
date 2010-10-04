@@ -10,6 +10,7 @@
     假設 有一個名稱為"大中華"的專案
     而且 有一位帳戶電郵地址是"user@ticketee.com"密碼是"password"
     而且 "user@ticketee.com"可以閱讀"大中華"專案
+    而且 "user@ticketee.com"可以建立"大中華"專案的工作單
     而且 已成功登入系統
     而且 我來到首頁
     當 我按下鏈接"大中華"

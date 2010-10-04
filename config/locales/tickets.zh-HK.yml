@@ -17,6 +17,7 @@ zh-HK:
     delete_title: "刪除"
     edit_title: "修改"
     new_title: "新工作單"
+    not_authorized_to_create_msg: "不可以建立專案的工作單。"
     not_created_msg: "工作單未能建立。"
     not_updated_msg: "未能修改工作單。"
     updated_msg: "工作單已修改。"
