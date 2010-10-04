@@ -1,5 +1,9 @@
 <h2><%= @ticket.title + " - #{@project.name }" %></h2>
 <%= t("tickets.created_by_msg", :ticket_creator => @ticket.user.email) %>
 <%= simple_format(@ticket.description) %>
-<%= link_to t("tickets.edit_title"), [:edit, @project, @ticket] %>
-<%= link_to t("tickets.delete_title"), [@project, @ticket], :method => :delete, :confirm => t("tickets.confirm_msg") %>
+<%= authorized?("edit tickets", @project) do %>
+  <%= link_to t("tickets.edit_title"), [:edit, @project, @ticket] %>
+<% end %>
+<%= authorized?("delete tickets", @project) do %>
+  <%= link_to t("tickets.delete_title"), [@project, @ticket], :method => :delete, :confirm => t("tickets.confirm_msg") %>
+<% end %>

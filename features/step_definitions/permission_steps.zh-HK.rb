@@ -13,6 +13,10 @@ end
   create_permission(user, find_project(project), "edit tickets")
 end
 
+假設 /^"([^"]*)"可以刪除"([^"]*)"專案的工作單$/ do |user, project|
+  create_permission(user, find_project(project), "delete tickets")
+end
+
 def create_permission(email, object, action)
   Permission.create!(:user => User.find_by_email!(email), :object => object, :action => action)
 end

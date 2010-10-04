@@ -61,6 +61,12 @@ describe TicketsController do
         put :update, { :project_id => project.id, :id => ticket.id }
         cannot_update_tickets!
       end
+
+      it "cannot delete a ticket without permission" do
+        delete :destroy, { :project_id => project.id, :id => ticket.id }
+        response.should redirect_to(project)
+        flash[:alert].should eql(I18n.t("tickets.not_authorized_to_delete_msg"))
+      end
     end
   end
 
@@ -103,6 +109,12 @@ describe TicketsController do
       it "沒有工作單修改權限是不能執行這個工作" do
         put :update, { :project_id => project.id, :id => ticket.id }
         cannot_update_tickets!
+      end
+
+      it "沒有工作單刪除權限是不能執行這個工作" do
+        delete :destroy, { :project_id => project.id, :id => ticket.id }
+        response.should redirect_to(project)
+        flash[:alert].should eql(I18n.t("tickets.not_authorized_to_delete_msg"))
       end
     end
   end

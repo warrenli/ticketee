@@ -18,6 +18,7 @@ en:
     edit_title: "Edit"
     new_title: "New Ticket"
     not_authorized_to_create_msg: "You are not allowed to create tickets on this project."
+    not_authorized_to_delete_msg: "You are not allowed to delete tickets from this project."
     not_authorized_to_update_msg: "You are not allowed to edit tickets on this project."
     not_created_msg: "Ticket has not been created."
     not_updated_msg: "Ticket has not been updated."
