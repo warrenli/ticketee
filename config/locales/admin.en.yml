@@ -13,5 +13,10 @@ en:
     not_created_msg: "User has not been created."
     not_self_deleted_msg: "You cannot delete yourself!"
     not_updated_msg: "User has not been updated."
+    permissions_title: "Permissions"
     updated_msg: "User has been updated."
     users_title: "Users"
+  admin_permission:
+    page_title: "Permissions for %{user}"
+    update_button: "Update"
+    updated_msg: "Permissions updated."

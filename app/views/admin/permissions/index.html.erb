@@ -1,0 +1,23 @@
+<% title("#{Permission.model_name.human}") %>
+<h2><%= t("admin_permission.page_title", :user => @user.email) %></h2>
+  <%= form_tag update_user_permissions_path, :method => :put do %>
+  <table>
+  <thead>
+    <th><%= "#{Project.model_name.human}" %></th>
+    <% permissions.each do |name, text| %>
+      <th><%= text %></th>
+    <% end %>
+  </thead>
+  <tbody>
+    <% @projects.each do |project| %>
+      <tr>
+      <td><%= project.name %></td>
+      <% permissions.each do |name, text| %>
+        <td><%= check_box_tag "permissions[#{project.id}][#{name}]", 1, @ability.can?(name.to_sym, project) %></td>
+      <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+  </table>
+  <%= submit_tag t("admin_permission.update_button") %>
+<% end %>

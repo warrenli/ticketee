@@ -13,5 +13,10 @@ zh-HK:
     not_created_msg: "帳戶未能建立。"
     not_self_deleted_msg: "不可以刪除自已的帳戶!"
     not_updated_msg: "未能修改帳戶。"
+    permissions_title: "權限"
     updated_msg: "帳戶已修改。"
     users_title: "帳戶"
+  admin_permission:
+    page_title: "帳戶權限 - %{user}"
+    update_button: "更新"
+    updated_msg: "權限已修改。"
