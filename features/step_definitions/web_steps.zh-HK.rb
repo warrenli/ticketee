@@ -22,28 +22,28 @@ end
 end
 
 #When /^(?:|I )press "([^"]*)"(?: within "([^"]*)")?$/ do |button, selector|
-當 /^(?:|我)按下了"([^\"]*)"按钮(?: within "([^"]*)")?$/ do |button, selector|
+當 /^(?:|我)按下了"([^"]*)"按钮(?: 包含在"([^"]*)")?$/ do |button, selector|
   with_scope(selector) do
     click_button(button)
   end
 end
 
 #When /^(?:|I )follow "([^"]*)"(?: within "([^"]*)")?$/ do |link, selector|
-當 /^(?:|我)按下鏈接"([^"]*)"(?: within "([^"]*)")?$/ do |link, selector|
+當 /^(?:|我)按下鏈接"([^"]*)"(?: 包含在"([^"]*)")?$/ do |link, selector|
   with_scope(selector) do
     click_link(link)
   end
 end
 
 #When /^(?:|I )fill in "([^"]*)" with "([^"]*)"(?: within "([^"]*)")?$/ do |field, value, selector|
-當 /^(?:|我)在"([^\"]*)"欄位中輸入"([^\"]*)"(?: within "([^"]*)")?$/ do |field, value, selector|
+當 /^(?:|我)在"([^"]*)"欄位中輸入"([^"]*)"(?: 包含在"([^"]*)")?$/ do |field, value, selector|
   with_scope(selector) do
     fill_in(field, :with => value)
   end
 end
 
 #When /^(?:|I )fill in "([^"]*)" for "([^"]*)"(?: within "([^"]*)")?$/ do |value, field, selector|
-當 /^(?:|我)在"([^\"]*)"欄位中填寫"([^\"]*)"(?: within "([^"]*)")?$/ do |field, value, selector|
+當 /^(?:|我)在"([^"]*)"欄位中填寫"([^"]*)"(?: 包含在"([^"]*)")?$/ do |field, value, selector|
   with_scope(selector) do
     fill_in(field, :with => value)
   end
@@ -61,7 +61,7 @@ end
 # based on naming conventions.
 #
 #When /^(?:|I )fill in the following(?: within "([^"]*)")?:$/ do |selector, fields|
-當 /^(?:|我)載入如下資料(?: within "([^"]*)")?:$/ do |selector, fields|
+當 /^(?:|我)載入如下資料(?: 包含在"([^"]*)")?:$/ do |selector, fields|
   with_scope(selector) do
     fields.rows_hash.each do |name, value|
       When %{我在"#{name}"欄位中輸入"#{value}"}
@@ -76,7 +76,7 @@ end
 #end
 
 #When /^(?:|I )check "([^"]*)"(?: within "([^"]*)")?$/ do |field, selector|
-當 /^(?:|我)在"([^"]*)"框打勾(?: within "([^"]*)")?$/ do |field, selector|
+當 /^(?:|我)在"([^"]*)"框打勾(?: 包含在"([^"]*)")?$/ do |field, selector|
   with_scope(selector) do
     check(field)
   end
@@ -107,23 +107,16 @@ end
 #  expected.should == actual
 #end
 
-那麼 /^(?:|我)應該看到"([^\"]*)"(?:|的提示信息)$/ do |text|
-  if page.respond_to? :should
-    page.should have_content(text)
-  else
-    assert page.has_content?(text)
+#Then /^(?:|I )should see "([^"]*)"(?: within "([^"]*)")?$/ do |text, selector|
+那麼 /^(?:|我)應該看到"([^"]*)"(?: 包含在"([^"]*)")?$/ do |text, selector|
+  with_scope(selector) do
+    if page.respond_to? :should
+      page.should have_content(text)
+    else
+      assert page.has_content?(text)
+    end
   end
 end
-
-#Then /^(?:|I )should see "([^"]*)"(?: within "([^"]*)")?$/ do |text, selector|
-#  with_scope(selector) do
-#    if page.respond_to? :should
-#      page.should have_content(text)
-#    else
-#      assert page.has_content?(text)
-#    end
-#  end
-#end
 
 #Then /^(?:|I )should see \/([^\/]*)\/(?: within "([^"]*)")?$/ do |regexp, selector|
 #  regexp = Regexp.new(regexp)
@@ -136,24 +129,16 @@ end
 #  end
 #end
 
-
-那麼 /^(?:|我)應該不會看到"([^\"]*)"(?:|的提示信息)$/ do |text|
-  if page.respond_to? :should
-    page.should have_no_content(text)
-  else
-    assert page.has_no_content?(text)
+#Then /^(?:|I )should not see "([^"]*)"(?: within "([^"]*)")?$/ do |text, selector|
+那麼 /^(?:|我)應該不會看到"([^"]*)"(?: 包含在"([^"]*)")?$/ do |text, selector|
+  with_scope(selector) do
+    if page.respond_to? :should
+      page.should have_no_content(text)
+    else
+      assert page.has_no_content?(text)
+    end
   end
 end
-
-#Then /^(?:|I )should not see "([^"]*)"(?: within "([^"]*)")?$/ do |text, selector|
-#  with_scope(selector) do
-#    if page.respond_to? :should
-#      page.should have_no_content(text)
-#    else
-#      assert page.has_no_content?(text)
-#    end
-#  end
-#end
 
 #Then /^(?:|I )should not see \/([^\/]*)\/(?: within "([^"]*)")?$/ do |regexp, selector|
 #  regexp = Regexp.new(regexp)
