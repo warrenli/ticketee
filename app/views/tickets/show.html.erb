@@ -3,12 +3,13 @@
   <%= t("tickets.created_by_msg", :ticket_creator => @ticket.user.email) %>
   <%= simple_format(@ticket.description) %>
 
-  <% if @ticket.asset.exists? %>
+  <% if !@ticket.assets.empty? %>
     <h3><%= t("tickets.attached_file") %></h3>
-    <div class="asset">
-      <p><%= link_to File.basename(@ticket.asset.path), @ticket.asset.url %></p>
-      <p><small><%= number_to_human_size(@ticket.asset.size) %>
-                (<%= @ticket.asset.content_type %>)</small></p>
+    <div class="assets">
+      <% @ticket.assets.each do |asset| %>
+        <p><%= link_to asset.asset_file_name, asset.asset.url %></p>
+        <p><small><%= number_to_human_size(asset.asset.size) %></small></p>
+      <% end %>
     </div>
   <% end %>
 </div>

@@ -39,7 +39,11 @@
   場景: 建立包含附加物的工作單
     當 在"標題"欄位中輸入"籌款"
     而且 在"明細"欄位中輸入"通過各種渠道和採用不同方式籌集必需的資金"
-    而且 加入附加文件檔"spec/fixtures/speed.txt"到欄位"檔案"
+    而且 加入附加文件檔"spec/fixtures/speed.txt"到欄位"檔案 #1"
+    而且 加入附加文件檔"spec/fixtures/spin.txt"到欄位"檔案 #2"
+    而且 加入附加文件檔"spec/fixtures/gradient.txt"到欄位"檔案 #3"
     而且 按下了"建立 工作單"按钮
     那麼 我應該看到"工作單已成功建立。"
-    那麼 我應該看到"speed.txt" 包含在"#ticket .asset"
+    而且 我應該看到"speed.txt" 包含在"#ticket .assets"
+    而且 我應該看到"spin.txt" 包含在"#ticket .assets"
+    而且 我應該看到"gradient.txt" 包含在"#ticket .assets"
