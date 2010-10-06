@@ -13,11 +13,8 @@ def cannot_update_tickets!
 end
 
 describe TicketsController do
-  before do
-    stub_warden
-  end
 
-  let(:user) { User.create!(:email => "user@ticketee.com", :password => "password", :password_confirmation => "password") }
+  let(:user) { create_user! }
   let(:project) { Project.create!(:name => "Ticketee" ) }
   let(:ticket) { project.tickets.create(:title => "Restrict permissions", :description => "something happen", :user => user) }
 
@@ -29,7 +26,7 @@ describe TicketsController do
 
     context "standard users" do
       it "cannot access a ticket for a project they don't have access to" do
-        sign_in_as(user)
+        sign_in(:user, user)
         get :show, :id => ticket.id, :project_id => project.id
         response.should redirect_to(root_path)
         flash[:alert].should eql(I18n.t("projects.not_found_msg"))
@@ -38,7 +35,7 @@ describe TicketsController do
 
     context "user with permission to view the project" do
       before do
-        sign_in_as(user)
+        sign_in(:user, user)
         Permission.create(:user => user, :object => project, :action => "read")
       end
 
@@ -78,7 +75,7 @@ describe TicketsController do
 
     context "一般帳戶" do
       it "當沒有專案的閱讀權限是不可以存取專案的工作單 " do
-        sign_in_as(user)
+        sign_in(:user, user)
         get :show, :id => ticket.id, :project_id => project.id
         response.should redirect_to(root_path)
         flash[:alert].should eql(I18n.t("projects.not_found_msg"))
@@ -87,7 +84,7 @@ describe TicketsController do
 
     context "帳戶有閱讀權限專案" do
       before do
-        sign_in_as(user)
+        sign_in(:user, user)
         Permission.create(:user => user, :object => project, :action => "read")
       end
 

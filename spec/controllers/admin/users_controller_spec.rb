@@ -3,17 +3,14 @@
 require 'spec_helper'
 
 describe Admin::UsersController do
-  before do
-    stub_warden
-  end
 
-  let(:user) { User.create!(:email => "user@ticketee.com", :password => "password", :password_confirmation => "password") }
+  let(:user) { create_user! }
 
   context "non-admin users" do
     before do
       I18n.locale = "en"
       I18n.default_locale = "en"
-      sign_in_as(user)
+      sign_in(:user, user)
     end
 
     it "are not able to access the index action" do
@@ -27,7 +24,7 @@ describe Admin::UsersController do
     before do
       I18n.locale = "zh-HK"
       I18n.default_locale = "zh-HK"
-      sign_in_as(user)
+      sign_in(:user, user)
     end
 
     it "不可以執行 \"index\" 工作" do
