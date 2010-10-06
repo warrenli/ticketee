@@ -90,6 +90,9 @@ GEM
       treetop (>= 1.4.5)
     mime-types (1.16)
     nokogiri (1.4.3.1)
+    paperclip (2.3.3)
+      activerecord
+      activesupport
     polyglot (0.3.1)
     rack (1.2.1)
     rack-mount (0.6.13)
@@ -152,6 +155,7 @@ DEPENDENCIES
   jammit
   jquery-rails
   launchy
+  paperclip
   rails (= 3.0.0)
   rspec-rails (= 2.0.0.beta.20)
   sqlite3-ruby

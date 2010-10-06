@@ -4,5 +4,6 @@ log/*.log
 tmp/**/*
 config/database.yml
 public/assets/*
+public/system
 !.gitkeep
 *.swp

@@ -13,6 +13,7 @@ gem "escape_utils"
 
 gem 'devise'
 gem 'cancan'
+gem 'paperclip'
 
 group :development, :test do
   gem 'rspec-rails', '= 2.0.0.beta.20'

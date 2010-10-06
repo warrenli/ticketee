@@ -8,14 +8,17 @@ en:
       ticket:
         title: "Title"
         description: "Description"
+        asset: "Asset"
 
   tickets:
+    attached_file: "Attached File"
     confirm_msg: "Are you sure?"
     created_msg: "Ticket has been created."
     created_by_msg: "Created by %{ticket_creator}"
     deleted_msg: "Ticket has been deleted."
     delete_title: "Delete"
     edit_title: "Edit"
+    file: "File"
     new_title: "New Ticket"
     not_authorized_to_create_msg: "You are not allowed to create tickets on this project."
     not_authorized_to_delete_msg: "You are not allowed to delete tickets from this project."

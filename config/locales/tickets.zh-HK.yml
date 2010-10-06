@@ -8,14 +8,17 @@ zh-HK:
       ticket:
         title: "標題"
         description: "明細"
+        asset: "附加物"
 
   tickets:
+    attached_file: "附加檔案"
     confirm_msg: "請確認刪除!"
     created_msg: "新工作單已成功建立。"
     created_by_msg: "%{ticket_creator} 建立這工作單"
     deleted_msg: "工作單已刪除。"
     delete_title: "刪除"
     edit_title: "修改"
+    file: "檔案"
     new_title: "新工作單"
     not_authorized_to_create_msg: "不可以建立專案的工作單。"
     not_authorized_to_delete_msg: "不可以刪除專案的工作單。"

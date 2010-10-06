@@ -95,10 +95,11 @@ end
 #end
 
 #When /^(?:|I )attach the file "([^"]*)" to "([^"]*)"(?: within "([^"]*)")?$/ do |path, field, selector|
-#  with_scope(selector) do
-#    attach_file(field, path)
-#  end
-#end
+當 /^(?:|我)加入附加文件檔"([^"]*)"到欄位"([^"]*)"(?: 包含在"([^"]*)")?$/ do |path, field, selector|
+  with_scope(selector) do
+    attach_file(field, path)
+  end
+end
 
 #Then /^(?:|I )should see JSON:$/ do |expected_json|
 #  require 'json'
