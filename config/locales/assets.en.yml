@@ -1,0 +1,14 @@
+en:
+  #activerecord:
+  #  models:
+  #    asset:
+  #      one: "Asset"
+  #      other: "Assets"
+  #  attributes:
+  #    asset:
+  #      asset_content_type: "xxx"
+  #      asset_file_name: "xxx"
+  #      asset_file_size: "xxx"
+
+  assets:
+    cannot_show_msg: "The asset you were looking for could not be found."

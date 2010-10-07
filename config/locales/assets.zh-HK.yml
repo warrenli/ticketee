@@ -1,0 +1,14 @@
+zh-HK:
+  #activerecord:
+  #  models:
+  #    asset:
+  #      one: "資產"
+  #      other: "多個資產"
+  #  attributes:
+  #    asset:
+  #      asset_content_type: "xxx"
+  #      asset_file_name: "xxx"
+  #      asset_file_size: "xxx"
+
+  assets:
+    cannot_show_msg: "找不到你須要的資料。"

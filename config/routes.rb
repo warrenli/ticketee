@@ -15,4 +15,6 @@ Ticketee::Application.routes.draw do
   end
 
   match '/admin/users/:user_id/permissions', :to => 'admin/permissions#update', :as => :update_user_permissions
+
+  resources :assets
 end
