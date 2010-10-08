@@ -12,3 +12,4 @@ en:
 
   assets:
     cannot_show_msg: "The asset you were looking for could not be found."
+    add_another_file_msg: "Add another file"

@@ -84,13 +84,13 @@ GEM
     launchy (0.3.7)
       configuration (>= 0.0.5)
       rake (>= 0.8.1)
-    mail (2.2.6.1)
+    mail (2.2.7)
       activesupport (>= 2.3.6)
       mime-types
       treetop (>= 1.4.5)
     mime-types (1.16)
     nokogiri (1.4.3.1)
-    paperclip (2.3.3)
+    paperclip (2.3.4)
       activerecord
       activesupport
     polyglot (0.3.1)

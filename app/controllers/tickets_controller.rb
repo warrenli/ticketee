@@ -15,10 +15,12 @@ class TicketsController < ApplicationController
 
   def new
     @ticket = @project.tickets.build
-    3.times { @ticket.assets.build }
+    1.times { @ticket.assets.build }
+    @assets_count = 0
   end
 
   def edit
+    @assets_count = @ticket.assets.count
   end
 
   def create

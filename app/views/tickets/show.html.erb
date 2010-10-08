@@ -7,8 +7,11 @@
     <h3><%= t("tickets.attached_file") %></h3>
     <div class="assets">
       <% @ticket.assets.each do |asset| %>
-        <p><%= link_to asset.asset_file_name, asset.asset.url %></p>
-        <p><small><%= number_to_human_size(asset.asset.size) %></small></p>
+        <p>
+        <%= link_to asset.asset_file_name, asset.asset.url %>
+        (<small><%= number_to_human_size(asset.asset.size) %></small>)
+        - (ID: <%= asset.id %>)
+        </p>
       <% end %>
     </div>
   <% end %>

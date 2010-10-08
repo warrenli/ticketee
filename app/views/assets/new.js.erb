@@ -1,0 +1,5 @@
+$("#files").append("<%= escape_javascript(render(:partial => 'new_asset', :locals => { :number => @number })) %>");
+
+$("#files .new_asset:last").effect("highlight", {}, 5000);
+
+$("#new_asset_link").html('<%= link_to t("assets.add_another_file_msg"), new_asset_path(:number => @number+1), :remote => true,  :id =>"add_new_asset" %>')

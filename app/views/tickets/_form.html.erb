@@ -8,12 +8,25 @@
     <%= f.label :description %><br />
     <%= f.text_area :description %>
   </p>
-  <% number = 0 %>
-  <%= f.fields_for :assets do |asset| %>
-    <p>
-      <%= asset.label :asset, t("tickets.file") + " ##{number += 1} " %>
-      <%= asset.file_field :asset %>
-    </p>
+  <% number = @assets_count ||0 %>
+  <div id="files">
+  <%= f.fields_for :assets do |f| %>
+    <% unless f.object.new_record? %>
+      <p>
+        <%= f.label :_destroy, 'Remove File?: ' %>
+        <%= f.check_box :_destroy %>
+        <%= f.hidden_field :id %>
+        <%= f.object.asset_file_name %>
+        (<small><%= number_to_human_size(f.object.asset.size) %></small>)
+        - (ID: <%= f.object.id %>)
+      </p>
+    <% else %>
+      <%= render :partial => "assets/new_asset", :locals => { :number => number=number+1 } %>
+    <% end %>
   <% end %>
+  </div>
+  <p id="new_asset_link">
+    <%= link_to t("assets.add_another_file_msg"), new_asset_path(:number => number+1), :remote => true,  :id =>"add_new_asset" %>
+  </p>
   <%= f.submit %>
 <% end %>

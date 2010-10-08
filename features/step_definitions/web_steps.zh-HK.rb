@@ -97,7 +97,7 @@ end
 #When /^(?:|I )attach the file "([^"]*)" to "([^"]*)"(?: within "([^"]*)")?$/ do |path, field, selector|
 當 /^(?:|我)加入附加文件檔"([^"]*)"到欄位"([^"]*)"(?: 包含在"([^"]*)")?$/ do |path, field, selector|
   with_scope(selector) do
-    attach_file(field, path)
+    attach_file(field, Rails.root + path)
   end
 end
 
